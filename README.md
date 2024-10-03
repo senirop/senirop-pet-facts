@@ -4,7 +4,7 @@ This repository provides a collection of data related to various animals. The da
 
 ## Requirements
 
-Node.js v18.20.4
+Node.js v20.14.0
 
 Make sure you have the right version by typing:
 
@@ -23,3 +23,9 @@ cd your-project-directory
 npm install
 npm run dev
 ```
+
+## Resources
+
+https://freetestapi.com/apis/animals
+https://catfact.ninja
+https://cataas.com/
