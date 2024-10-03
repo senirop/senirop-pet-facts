@@ -26,6 +26,6 @@ npm run dev
 
 ## Resources
 
-https://freetestapi.com/apis/animals
-https://catfact.ninja
-https://cataas.com/
+- https://freetestapi.com/apis/animals
+- https://catfact.ninja
+- https://cataas.com/
