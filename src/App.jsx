@@ -1,38 +1,20 @@
-import { useState, useEffect } from "react";
+import { Button } from "@mui/material";
+import useCats from "./hooks/useCats";
+import { CatCard } from "./components/CatComponent";
 
 const App = () => {
-  const [animals, setAnimals] = useState([]);
-
-  useEffect(() => {
-    const fetchAnimals = async () => {
-      const response = await fetch("https://freetestapi.com/api/v1/animals");
-      const data = await response.json();
-      setAnimals(data);
-    };
-    if (animals.length === 0) {
-      fetchAnimals();
-    }
-  }, []);
+  const { cats, generateCatObject, deleteCat } = useCats();
 
   return (
     <>
       <h1>Animals</h1>
+      <Button variant="contained" onClick={generateCatObject}>
+        Generate
+      </Button>
 
-      <table>
-        <tr>
-          <th>Name</th>
-          <th>Species</th>
-          <th>Family</th>
-        </tr>
-
-        {animals.map((animal, key) => (
-          <tr key={`${key}`}>
-            <td>{animal.name}</td>
-            <td>{animal.species}</td>
-            <td>{animal.family}</td>
-          </tr>
-        ))}
-      </table>
+      {cats.map((cat, key) => (
+        <CatCard cat={cat} key={cat.id} index={key + 1} deleteCat={deleteCat} />
+      ))}
     </>
   );
 };

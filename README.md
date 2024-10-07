@@ -29,3 +29,15 @@ npm run dev
 - https://freetestapi.com/apis/animals
 - https://catfact.ninja
 - https://cataas.com/
+
+
+# Priority
+1. Set the layout
+   1. Installation of MaterialUI ✔️
+   2. Pages structure (install react-router-dom) ✔️
+2. Functionality
+   1. Fetch Cat Fact API and get two first words ✔️
+   2. Fetch CATAAS API with json=true with two words fetched previously ✔️
+   3. Render a card with Fact, number, fact sentence and the image ✔️
+   4. View card detail ❌
+3. Responsive Design ❌
